@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <!-- Google Charts -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["gantt"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn("string", "Task ID");
+        data.addColumn("string", "Task Name");
+        data.addColumn("string", "Resource");
+        data.addColumn("date", "Start Date");
+        data.addColumn("date", "End Date");
+        data.addColumn("number", "Duration");
+        data.addColumn("number", "Percent Complete");
+        data.addColumn("string", "Dependencies");
+
+        data.addRows([
+          [
+            "reqdesign",
+            "Requirements Design",
+            "Capstone",
+            new Date(2019, 1, 25),
+            new Date(2019, 2, 2),
+            null,
+            100,
+            null
+          ],
+          [
+            "envsetup",
+            "Environment Setup",
+            "Capstone",
+            new Date(2019, 1, 25),
+            new Date(2019, 2, 2),
+            null,
+            100,
+            null
+          ],
+          [
+            "impmod1",
+            "Implement Module 1",
+            "Capstone",
+            new Date(2019, 2, 3),
+            new Date(2019, 2, 19),
+            null,
+            100,
+            null
+          ],
+          [
+            "impmod2",
+            "Implement Module 2",
+            "Capstone",
+            new Date(2019, 2, 18),
+            new Date(2019, 3, 2),
+            null,
+            100,
+            null
+          ],
+          [
+            "impmod3",
+            "Implement Module 3",
+            "Capstone",
+            new Date(2019, 3, 1),
+            new Date(2019, 3, 17),
+            null,
+            50,
+            null
+          ],
+          [
+            "testing",
+            "Unit/Integration Testing",
+            "Capstone",
+            new Date(2019, 3, 16),
+            new Date(2019, 3, 26),
+            null,
+            0,
+            null
+          ],
+          [
+            "testingfin",
+            "Final Testing Procedures",
+            "Capstone",
+            new Date(2019, 3, 25),
+            new Date(2019, 4, 7),
+            null,
+            0,
+            null
+          ],
+          [
+            "delivery",
+            "Project Delivery",
+            "Capstone",
+            new Date(2019, 4, 8),
+            new Date(2019, 4, 19),
+            null,
+            0,
+            null
+          ]
+        ]);
+
+        var options = {
+          height: 375,
+          gantt: {
+            trackHeight: 40
+          }
+        };
+
+        var chart = new google.visualization.Gantt(
+          document.getElementById("chart_div")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
+
+    <!-- Theme CSS - Includes Bootstrap -->
+    <link href="css/creative.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top py-3 bg-dark"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"
+          >Capstone Spring 2019</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#description"
+                >Description</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#repository"
+                >Repository</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#repository"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="container h-100">
+        <div
+          class="row h-100 align-items-center justify-content-center text-center"
+        >
+          <div class="col-lg-10 align-self-end">
+            <h1 class="text-uppercase text-white font-weight-bold">
+              Eaton Data Access
+            </h1>
+            <hr class="divider my-4" />
+          </div>
+          <div class="col-lg-8 align-self-baseline">
+            <p class="text-white-75 font-weight-light mb-5">
+              This is a website to summarize the Spring 2019 Capstone project at
+              the University of Puerto Rico at Mayaguez
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Team Section -->
+    <section class="page-section bg-primary" id="team">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h3 class="text-white mt-0">Meet the Team</h3>
+            <hr class="divider light my-4" />
+            <div class="row">
+              <div class="col-lg-3 col-md-6 text-center">
+                <div>
+                  <img
+                    class="rounded-circle img-fluid img-thumbnail"
+                    src="img/members/jady.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div class="mt-5">
+                  <h3 class="h4 mb-2">Jady Urbina</h3>
+                  <p class="text-white mb-0">
+                    Computer Science and Engineering Student
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div>
+                  <img
+                    class="rounded-circle img-fluid img-thumbnail"
+                    src="img/members/kenneth.png"
+                    alt=""
+                  />
+                </div>
+                <div class="mt-5">
+                  <h3 class="h4 mb-2">Kenneth Padró</h3>
+                  <p class="text-white mb-0">
+                    Computer Science and Engineering Student
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div>
+                  <img
+                    class="rounded-circle img-fluid img-thumbnail"
+                    src="img/members/jahn.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="mt-5">
+                  <h3 class="h4 mb-2">Jahn Carlo Marrero</h3>
+                  <p class="text-white mb-0">
+                    Computer Science and Engineering Student
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div>
+                  <img
+                    class="rounded-circle img-fluid img-thumbnail"
+                    src="img/members/manuel.png"
+                    alt=""
+                  />
+                </div>
+                <div class="mt-5">
+                  <h3 class="h4 mb-2">Dr. Manuel Rodríguez</h3>
+                  <p class="text-white mb-0">
+                    Project Supervisor
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="page-section" id="description">
+      <div class="container">
+        <h2 class="text-center mt-0">Project Foundation</h2>
+        <hr class="divider my-4" />
+        <div class="row">
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">The Client</h3>
+              <p class="text-muted mb-0">
+                Eaton manufacturing company located at Las Piedras, Puerto Rico
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">The Goal</h3>
+              <p class="text-muted mb-0">
+                To have the full stack development experience and deliver a
+                minimal viable product that can evolve into a bigger application
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">The Product</h3>
+              <p class="text-muted mb-0">
+                A web app that compiles the job of an existing Microsoft Access
+                solution
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Use Solution -->
+    <section class="page-section bg-dark text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">Why use this solution?</h2>
+        <p class="text-white mb-0" style="text-align: justify">
+          At the moment, it takes a large amount of time to input machinery data
+          into a Microsoft Access database. The process starts when every worker
+          writes up machinery data into paper, which is then collected by a
+          coordinator. Then, a data entry assigned will input by hand that data
+          into Access, which is currently accessible through computers in the
+          company, non mobile devices. This limits the availability of up to
+          date data of production. Naturally, problems like incongruence and
+          data accessibility are born from these interactions. In addition, the
+          database is not accessible through other devices which can be done by
+          using a web based database. The problem is very specific, but with a
+          modular focus it is open to future features and further modification
+          for the clients needs. The goal for this project is to, firstly,
+          provide an easy-to-use UI for workers and supervisors to have a
+          platform they can communicate easily and even on real time as the data
+          is recorded. Also, providing a database service such as SQL, that can
+          make the data accessible by any device connected to the internet,
+          making it easier to access by anyone with the required permissions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Solution Summary -->
+    <section class="page-section bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">Eaton DAS (Data Access Solution)</h2>
+        <p class="text-white mb-0" style="text-align: justify">
+          EatonDAS is a Web App that simplifies data management services
+          according to the company's needs. It only takes the elements your
+          company or manufacture line uses for data control and optimization and
+          puts it in one place on the web. This then provides ease of access for
+          capable employees from anywhere, protects against database lockouts
+          and provides easy manipulation of already recorded data.
+        </p>
+      </div>
+    </section>
+
+    <!-- Technologies Used Section -->
+    <section class="page-section" id="description">
+      <div class="container">
+        <h2 class="text-center mt-0">Technology Used</h2>
+        <p class="text-muted mb-0" style="text-align:center">
+          We took advantage of having to do this project to learn many new
+          things. This slowed the proccess of development a bit since we had to
+          invest time into learning the technologies we would use, but in the
+          end, it payed off because we took new skills from the experience to
+          apply to our jobs.
+        </p>
+        <hr class="divider my-4" />
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div>
+              <img
+                class="rounded-circle img-fluid img-thumbnail"
+                src="img/technologies/react.png"
+                alt=""
+              />
+            </div>
+            <div class="mt-5">
+              <h3 class="h4 mb-2">ReactJS</h3>
+              <p class="text-muted mb-0">
+                ReactJS is one of the most demanded front-end development
+                languages in the industry
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div>
+              <img
+                class="rounded-circle img-fluid img-thumbnail"
+                src="img/technologies/materialui.jpg"
+                alt=""
+              />
+            </div>
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Material UI</h3>
+              <p class="text-muted mb-0">
+                This front-end library helps make applications look more
+                apealing
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div>
+              <img
+                class="rounded-circle img-fluid img-thumbnail"
+                src="img/technologies/flask.png"
+                alt=""
+              />
+            </div>
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Flask</h3>
+              <p class="text-muted mb-0">
+                Flask provides an easy way to create APIs to connect front-end
+                and back-end components
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div>
+              <img
+                class="rounded-circle img-fluid img-thumbnail"
+                src="img/technologies/postgresql.png"
+                alt=""
+              />
+            </div>
+            <div class="mt-5">
+              <h3 class="h4 mb-2">PostgreSQL</h3>
+              <p class="text-muted mb-0">
+                PostgreSQL makes it easier to work with databases
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr class="divider my-4" />
+        <p class="text-muted mb-0" style="text-align:center">
+          It is important to denote that neither of us had any experience with
+          the front-end technology used, and that the team took advantage of
+          this Capstone to learn new technology that is being used in the
+          industry
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Planning -->
+    <section class="page-section bg-dark text-white">
+      <div class="container text-center">
+        <h1 class="mb-4">Project Planning</h1>
+        <p class="text-white mb-0" style="text-align: center">
+          In this stage, it was important to apply what we have learned in the
+          courses of this Bachelor's. Since we were working with a full stack
+          project, it was important that we organized our deliverables in
+          modules. It was also important that these modules were deliverable in
+          the amount of time we worked on this project for the semester. It was
+          crucial that every single module was feasible. Our last but not less
+          important goal was to have a project that our colleague Kenneth Padró
+          can keep working on as an employee of Eaton.
+        </p>
+        <hr class="divider my-4" />
+        <h3 class="mb-4">Modules Definition</h3>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Module 1</h3>
+              <p class="text-white mb-0">
+                Implement login and register functionalities based on access
+                roles. Discuss and plan web app screenflow.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Module 2</h3>
+              <p class="text-white mb-0">
+                Implement database based on ER Diagrams. Create API to access
+                database and connect to front end. Make sure the right roles get
+                the right info. Implement basic front end navigation as
+                Microsoft Access solution already used by Eaton.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Module 3</h3>
+              <p class="text-white mb-0">
+                Testing phase. Create tests to make sure the application
+                sustains basic functionality. Make sure application is
+                deployable on remote server so further improvements can be made
+                even after semester is over.
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr class="divider my-4" />
+        <!-- Gantt Chart -->
+        <h3 class="mb-4">Project Gantt Chart</h3>
+        <div>
+          <div id="chart_div"></div>
+        </div>
+        <div class="mt-5"></div>
+        <p class="text-white mb-0">
+          This chart was done to keep track of what we did up until whatever
+          date was scheduled and what things we should have done for next
+          deliverable modules. It is a simple aplication of knowledge acquired
+          in courses like Software Engineering and Software Design.
+        </p>
+      </div>
+    </section>
+
+    <!-- ER Diagrams -->
+    <section class="page-section bg-primary text-white">
+      <div class="container text-center">
+        <h3 class="mb-4">ER Diagrams</h3>
+        <div>
+          <img
+            class="img-fluid img-thumbnail"
+            src="img/erdiagrams/erdiagramv2.jpeg"
+            alt=""
+            style="height: 50%"
+          />
+        </div>
+        <div class="mt-5"></div>
+        <p class="text-white mb-0">
+          These ER Diagrams served as the model to design the Data Base for our
+          Web App. We used skills learned in the Data Bases course, part of the
+          Computer Science and Engineering Bachelor's.
+        </p>
+        <hr class="divider light my-4" />
+        <!-- Wire Frame -->
+        <h3 class="mb-4">Wire Frames</h3>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <img
+                class="img-fluid img-thumbnail"
+                src="img/wireframe/wireframe3.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <img
+                class="img-fluid img-thumbnail"
+                src="img/wireframe/wireframe1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <img
+                class="img-fluid img-thumbnail"
+                src="img/wireframe/wireframe2.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-5"></div>
+        <p class="text-white mb-0">
+          The Wire Frames were extracted from the current working Microsoft
+          Access solution that Eaton is currently using. Our job was to
+          modernize it and give it a fresh look, hence using Material UI.
+        </p>
+      </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="page-section">
+      <div class="container">
+        <h2 class="text-center mt-0">Value Proposition</h2>
+        <hr class="divider my-4" />
+        <div class="row">
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Enterprise Resource Planning</h3>
+              <p class="text-muted mb-0" style="text-align:justify">
+                Our solution is part of a bigger Enterprise Resource Planning
+                idea that can help Eaton in the future. Machine by machine data
+                entry is very costly for Eaton, as it is done by a human and can
+                produce human errors. This process can smoetimes take weeks, and
+                data may be needed before that time frame.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Scalability</h3>
+              <p class="text-muted mb-0" style="text-align:justify">
+                This project can evolve into something grater. Programmable
+                Logic Controllers can be added for autmated input of data, and a
+                great entry for Eaton into the Enterprise Resource Planning
+                market can be made. This market is expected to exceed US$ 49.50
+                Billion by 2024. Also, patents to this product under the Eaton
+                company can be fetched, offering other companies and
+                manufacturers a similar solution by monetizing Eaton Data Acess
+                Solution.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Benefit for the Company</h3>
+              <p class="text-muted mb-0" style="text-align:justify">
+                Eaton Data Access Solution will aid the company into evolving
+                and protecting their data. Not only it will be safer to access
+                the database, but it will bring control over who and from where
+                employees can access it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Proccess -->
+    <section class="page-section bg-dark text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">
+          The Learning Process : Preparing for the Real World
+        </h2>
+        <hr class="divider light my-4" />
+        <div class="container" style="text-align:left">
+          <h3 class="mb-4">Jahn Marrero</h3>
+          <p class="text-white mb-0" style="text-align: justify">
+            This project helped me to summarize everything I have learned in my
+            Computer Science and Engineering Bachelor's degree at UPRM. It
+            helpeld me realize that every stage of the software development
+            process is very important for the quality of the final product. I
+            loved learning new things while doing a project that was meaningful
+            for my real world preparation.
+          </p>
+        </div>
+        <hr class="divider light my-4" />
+      </div>
+    </section>
+
+    <!-- Repo / Contact -->
+    <!-- https://github.com/ciic-inso-capstone-spring-2019/capstoneproject-eatondataaccess -->
+    <section class="page-section" id="repository">
+      <div class="container">
+        <a
+          class="btn btn-primary btn-lg btn-block"
+          href="https://github.com/ciic-inso-capstone-spring-2019/capstoneproject-eatondataaccess"
+          role="button"
+          >Repository</a
+        >
+        <hr class="divider light my-4" />
+        <div class="mt-5"></div>
+        <h2 class="text-center mt-0">Contact</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Jady Urbina</h3>
+              <p class="text-muted mb-0">
+                jady.urbina@upr.edu
+              </p>
+              <p class="text-muted mb-0">
+                ########
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Kenneth Padró</h3>
+              <p class="text-muted mb-0">
+                kenneth.padro@upr.edu
+              </p>
+              <p class="text-muted mb-0">
+                #######
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Jahn Carlo Marrero</h3>
+              <p class="text-muted mb-0">
+                jahn.marrero@upr.edu
+              </p>
+              <p class="text-muted mb-0">
+                787-299-1937
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="mt-5">
+              <h3 class="h4 mb-2">Dr. Manuel Rodríguez</h3>
+              <p class="text-muted mb-0">
+                manuel.rodriguez7@upr.edu
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5">
+      <div class="container">
+        <div class="small text-center text-muted">
+          Copyright &copy; 2019 - Start Bootstrap
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+  </body>
+</html>
